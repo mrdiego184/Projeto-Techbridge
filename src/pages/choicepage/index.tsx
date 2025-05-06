@@ -1,12 +1,12 @@
+import { Button, Container, Title } from "./styles";
 
-
-export default function ChoicePage() {
+export default function Choice() {
   return (
-    <div >
-        <h1>
-            ola
-        </h1>
-        <p>aksdjlaksndlk</p>
-    </div>
-  )
+    <Container>
+      <Title>Escolha uma opção</Title>
+      <Button>Sou empresa</Button>
+
+      <Button>Sou estudante</Button>
+    </Container>
+  );
 }
