@@ -1,8 +1,10 @@
+# Projeto Techbridge - Conectando talentos á inovação!
 
 🚀 TechBridge — Free Certification & Candidate Screening Platform
 FreeCertify is a web platform that provides free certification for students and a candidate screening tool for companies. It enables educational growth while allowing businesses to efficiently identify skilled tech talent.
 
-🧩 Project Overview
+🧩 Project Overview 
+
 TechBridge has two main user profiles:
 
 Students: Access free tech-related certifications, track progress, and build a shareable certificate portfolio.
