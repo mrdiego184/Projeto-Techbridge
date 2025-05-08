@@ -42,13 +42,22 @@ export const FormStudent = styled.div`
         
     }
 
-    a {
-    display:flex;
-    color:${props => props.theme["blue-300"]}; 
-    justify-content: center;
-    }   
+
 `;
 export const MensagemErro = styled.div`
     color:red;
     
 `
+
+import { Link } from "react-router-dom";
+
+export const LinkLogin = styled(Link)`
+  && {
+    color: ${props => props.theme["gray-100"]};
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+  }
+`;
+
