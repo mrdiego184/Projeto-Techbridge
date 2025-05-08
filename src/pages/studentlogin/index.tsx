@@ -1,16 +1,15 @@
 // Página de Login dos estudantes na plataforma
 
 import { useForm } from "react-hook-form";
-import { Containerlogin, FormStudent, MensagemErro } from "./styles.ts";
+import { Containerlogin, FormStudent, LinkLogin, MensagemErro } from "./styles.ts";
 
 const StudentLogform = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm(); // funçoes do react-hook-form
+  } = useForm(); 
 
-  console.log(errors);
 
   const onSubmit = (data: unknown) => {
     console.log(JSON.stringify(data));
@@ -43,7 +42,9 @@ const StudentLogform = () => {
         )}
 
         <button onClick={() => handleSubmit(onSubmit)()}>Entrar</button>
-        <a href="./studentregister/index.tsx">Não tem cadastro? Clique aqui!</a>
+        
+        <LinkLogin to="/studentRegister">Já tem cadastro? Clique aqui!</LinkLogin>
+
       </FormStudent>
     </Containerlogin>
   );

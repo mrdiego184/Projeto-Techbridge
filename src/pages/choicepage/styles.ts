@@ -7,7 +7,7 @@ export const Container = styled.div`
     justify-content: center;
     gap: 4rem;
     height: 100vh;
-    background-color: ${props => props.theme["gray-800"]};
+    background-color: ${props => props.theme["gray-900"]};
 `
 export const Title = styled.h1` 
     font-size: 2rem;

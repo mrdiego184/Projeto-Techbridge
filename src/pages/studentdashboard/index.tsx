@@ -1,11 +1,10 @@
-import { HeaderStudent } from "./styles";
-
+import  Header  from "../../components/header.tsx"
 export default function StudentDashboard () {
 
     return (
-        <HeaderStudent> 
+        <Header/>
             
-        </HeaderStudent>
+       
     )
 
 

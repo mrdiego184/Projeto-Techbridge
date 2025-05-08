@@ -9,7 +9,6 @@ const StudentRegform = () => {
 
     const {register, handleSubmit, formState: {errors}, watch} = useForm() // funçoes do react-hook-form
 
-    console.log(errors);
 
     const confirmaSenha = watch("senha");
 

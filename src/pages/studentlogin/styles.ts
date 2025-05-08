@@ -4,7 +4,7 @@ export const Containerlogin = styled.div `
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 3%;
+    height: 100vh;
 `;
 export const FormStudent = styled.div`
     display: flex;
@@ -17,9 +17,10 @@ export const FormStudent = styled.div`
 
     input {
     background-color:${props => props.theme["gray-800"]};
-    padding: 5px;
-    appearance; none;
+    padding: 8px;
+    appearance: none;
     border-radius: 10px;
+    border: none;
     color: white;
     }   
 
@@ -28,9 +29,10 @@ export const FormStudent = styled.div`
     }
 
     button {
-    background-color:black;
+    background-color: ${props => props.theme["blue-300"]};
+    border: none;
     color: white;
-    padding:15px;
+    padding: 14px;
     border-radius: 10px;
     transition: 0.5s;
     cursor: pointer;
@@ -38,7 +40,7 @@ export const FormStudent = styled.div`
     
 
     button:hover {
-        background-color: ${props => props.theme["blue-300"]};
+        background-color: ${props => props.theme["blue-700"]};
         
     }
 
@@ -52,3 +54,15 @@ export const MensagemErro = styled.div`
     color:red;
     
 `
+
+import { Link } from "react-router-dom";
+
+export const LinkLogin = styled(Link)`
+  && {
+    color: ${(props) => props.theme["gray-100"]};
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+  }
+`;
