@@ -1,7 +1,7 @@
 // Página de cadastro dos estudantes na plataforma 
 
 import { useForm } from "react-hook-form";
-import {Containerlogin, FormStudent, MensagemErro,} from './styles.ts';
+import {Containerlogin, FormStudent, LinkLogin, MensagemErro,} from './styles.ts';
 import validator from 'validator';
 
 
@@ -85,7 +85,10 @@ const onSubmit = (data :unknown) => {
                 {errors?.confsenha?.type === 'validate' && <MensagemErro>As senhas não são iguais.</MensagemErro>}
 
                 <button onClick={() => handleSubmit(onSubmit)()}>Cadastrar-se</button>
-                <a href="./studentlogin/index.tsx">Já é cadastrado? Clique aqui!</a>
+           
+
+                <LinkLogin to="/studentLogin">Já tem cadastro? Clique aqui!</LinkLogin>
+
 
             </FormStudent>
         </Containerlogin>

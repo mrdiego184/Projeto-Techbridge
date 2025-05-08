@@ -11,7 +11,7 @@ export default function Choice() {
           Sou empresa
         </Button>
 
-      <Button onClick={() => navigate("/student")}>
+      <Button onClick={() => navigate("/studentRegister")}>
         Sou estudante
       </Button>
     </Container>
