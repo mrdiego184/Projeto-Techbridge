@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
@@ -5,27 +6,160 @@ export const HeaderContainer = styled.header`
     border-bottom: solid;
     border-color: ${props => props.theme["blue-300"]};
     padding:40px;
+    max-width: 100dvw;
+    display:flex;
+    
+    @media (max-width: 768px) {
+    height: 20dvw;
+    }
 
 `
 export const HeaderLinks = styled.ul`
     display: flex;
+    flex-direction:row;
     align-items: center;
-    justify-content:center;
-    gap: 40px;
+    justify-content: center;
     color:${props => props.theme["blue-300"]};
     list-style: none;
     font-size: 2.5rem;
+    gap: 90px;
+    width: 100%;
+    
+    li {
+    transition: 0.5s;
+    padding: 0;
+    border-radius:10px
+    
+    }
     
     li:hover{
     background-color: ${props => props.theme["blue-300"]};
     color: white;
     border-radius:10px;
+    box-shadow: 0 0 10px #0077ff, 0 0 20px #00ccff;
     }
-    span{
-    font-size: 2rem;
-    border-left: solid;
-    padding-left: 30px
+    
+    @media (max-width: 768px) {
+    
+
+    li {
+    padding:0px;
+    height:auto;
     }
-    p{
-    color: white;}
+    li:hover{
+    box-shadow: 0 0 1px #0077ff, 0 0 10px #00ccff;
+    }
+    
+  }
     `
+    export const LinksHeader = styled(Link)`
+        text-decoration:none;
+
+    .textheader{ 
+    color: ${props => props.theme["blue-300"]}; 
+    transition: 0.5s;
+    padding: 5px;
+    border-radius:10px;
+    text-align: center;
+        }
+
+    .iconheader {
+    display: none;
+    text-decoration: none;
+    transition: 0.5s;
+    
+    }
+
+    &:hover .iconheader{
+    color: white; 
+  }
+    
+    .textheader:hover {
+    color: white; 
+     }
+
+    
+
+    &:active {
+    color: ${props => props.theme["blue-300"]}; 
+    }
+
+    @media (max-width: 768px) {
+    
+    .textheader {
+    display: none;
+    }
+
+    .iconheader {
+    color: ${props => props.theme["blue-300"]}; 
+    display:flex;
+    width: 50px;
+    height: 50px;
+    padding:5px;
+    
+    
+    }
+    }
+`;
+    export const UserSection = styled.div`
+     
+    @media (max-width: 768px) {
+        display:flex;
+        flex-direction: column;
+        border-left:none;
+        flex-wrape: nowrap;
+        justify-content: center;
+        padding-left: 0;
+        padding-right: 5px;
+
+        span {
+        text-align: center;
+        text-overflow: ellipsis;
+        }
+
+        p {
+        display:none;
+        }
+       
+        }
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border-left: solid;
+    padding-left: 30px;
+    border-color: ${props => props.theme["blue-300"]};
+    width:20%;
+
+    span {
+    font-size: 1rem;
+    color: ${props => props.theme["blue-300"]};
+
+    }
+    p {
+    color: white;
+    font-size: 0.9rem;
+    }
+    p:hover {
+    text-decoration:underline;
+    }
+
+    `
+    export const Userimg = styled.img`
+        
+        width:70px;
+        height:auto;
+        border-radius:60px;
+        border:solid ${props => props.theme["blue-300"]};
+        
+
+        
+    @media (max-width: 768px) {
+        width:40px;
+        border-radius:30px;
+        }
+
+    
+    `
+    

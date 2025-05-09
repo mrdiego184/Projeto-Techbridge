@@ -3,6 +3,8 @@ import Choice from "./pages/choicepage"
 import StudentRegform from "./pages/studentregister"
 import StudentLogform from "./pages/studentlogin"
 import StudentDashboard from "./pages/studentdashboard"
+import StudentCourses from "./pages/studentcourses"
+import StudentCertificates from "./pages/studentcertificates"
 
 export  function Router() {
   return (
@@ -12,6 +14,8 @@ export  function Router() {
         <Route path="/studentRegister" element={<StudentRegform/>} />
         <Route path="/studentLogin" element={<StudentLogform/>} />
         <Route path="/studentDashboard" element={<StudentDashboard/>} />
+        <Route path="/myCourses" element={<StudentCourses/>} />
+        <Route path="/myCertificates" element={<StudentCertificates/>} />
     </Routes>
 )
 }

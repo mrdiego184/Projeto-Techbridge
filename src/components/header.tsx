@@ -1,19 +1,43 @@
-import React from 'react'
-import { HeaderContainer, HeaderLinks } from './header.ts'
+// Componente do Cabeçalho
+import { type LucideIcon} from 'lucide-react';
+import {  HeaderContainer, HeaderLinks, LinksHeader, UserSection, Userimg,} from './header.ts'
 
-export default function Header() {
+interface LinkPage{
+  label: string;
+  href: string;
+  icon: LucideIcon;
+}
+interface PropsHeader{
+  links: LinkPage []
+}
+export default function Header({ links }: PropsHeader) {
   return (
 
+
     <HeaderContainer>
-        <HeaderLinks>
-            <li>Meus Cursos</li>
-            <li>Certificados</li>
-            <div>
+
+        <HeaderLinks> 
+            {links.map((link, index) => (
+               <li key={index}>
+               <LinksHeader to={link.href}>
+               <link.icon className="iconheader"/>
+               <span className="textheader">{link.label}</span></LinksHeader>
+             </li>
+             
+            ))}
+        </HeaderLinks>
+
+            <UserSection>
             <span>Olá usuário!</span>
             <p>Editar perfil</p>
-            <img src="https://img.icons8.com/win10/512w/FFFFFF/user.png" width="35px"></img>
-            </div>
-        </HeaderLinks>
+            </UserSection> 
+
+            <Userimg src="https://img.icons8.com/win10/512w/FFFFFF/user.png"> 
+            </Userimg>
+            
+
+           
     </HeaderContainer>
+
   )
 }
