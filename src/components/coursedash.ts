@@ -5,6 +5,7 @@ export const ContainerTitle = styled.h1`
     margin-top: 8%;
     font-size: 4rem;
     font-weight:black;
+    text-align:center;
 
     @media (max-width: 768px) {
     font-size: 2.5rem;

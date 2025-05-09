@@ -2,6 +2,7 @@
 import { type LucideIcon} from 'lucide-react';
 import {  HeaderContainer, HeaderLinks, LinksHeader, UserSection, Userimg,} from './header.ts'
 
+
 interface LinkPage{
   label: string;
   href: string;
@@ -21,11 +22,14 @@ export default function Header({ links }: PropsHeader) {
                <li key={index}>
                <LinksHeader to={link.href}>
                <link.icon className="iconheader"/>
-               <span className="textheader">{link.label}</span></LinksHeader>
+               <span className="textheader">{link.label}</span>
+               </LinksHeader>
              </li>
              
             ))}
+  
         </HeaderLinks>
+      
 
             <UserSection>
             <span>Olá usuário!</span>

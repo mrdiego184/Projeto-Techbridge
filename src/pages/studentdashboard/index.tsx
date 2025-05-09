@@ -1,11 +1,12 @@
 import  Header  from "../../components/header.tsx"
 import  CourseDash  from "../../components/coursedash.tsx"
-import { GraduationCap, LibraryBig } from "lucide-react"
+import { GraduationCap, LibraryBig, UserPen } from "lucide-react"
 export default function StudentDashboard () {
 
     const linksHeader = [
         {label: "Meus Cursos", href: '/myCourses', icon:LibraryBig},
-        {label: "Certificados", href: '/myCertificates', icon:GraduationCap}
+        {label: "Certificados", href: '/myCertificates', icon:GraduationCap},
+        {label: "", href: '/myProfile', icon:UserPen}
     ]
     return (
         <>

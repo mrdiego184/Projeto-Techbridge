@@ -5,6 +5,7 @@ import StudentLogform from "./pages/studentlogin"
 import StudentDashboard from "./pages/studentdashboard"
 import StudentCourses from "./pages/studentcourses"
 import StudentCertificates from "./pages/studentcertificates"
+import StudentProfile from "./pages/studentprofile"
 
 export  function Router() {
   return (
@@ -16,6 +17,7 @@ export  function Router() {
         <Route path="/studentDashboard" element={<StudentDashboard/>} />
         <Route path="/myCourses" element={<StudentCourses/>} />
         <Route path="/myCertificates" element={<StudentCertificates/>} />
+        <Route path="/myProfile" element={<StudentProfile/>} />
     </Routes>
 )
 }

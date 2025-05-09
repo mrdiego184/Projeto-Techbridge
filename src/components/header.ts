@@ -6,11 +6,14 @@ export const HeaderContainer = styled.header`
     border-bottom: solid;
     border-color: ${props => props.theme["blue-300"]};
     padding:40px;
-    max-width: 100dvw;
+    max-width: 100dvw;  
     display:flex;
+
+
     
     @media (max-width: 768px) {
     height: 20dvw;
+
     }
 
 `
@@ -40,7 +43,8 @@ export const HeaderLinks = styled.ul`
     }
     
     @media (max-width: 768px) {
-    
+    width: 100%;
+    gap:100px;
 
     li {
     padding:0px;
@@ -61,18 +65,20 @@ export const HeaderLinks = styled.ul`
     padding: 5px;
     border-radius:10px;
     text-align: center;
+    font-weight: bolder;
         }
 
     .iconheader {
     display: none;
     text-decoration: none;
     transition: 0.5s;
-    
     }
 
     &:hover .iconheader{
     color: white; 
+
   }
+
     
     .textheader:hover {
     color: white; 
@@ -82,6 +88,7 @@ export const HeaderLinks = styled.ul`
 
     &:active {
     color: ${props => props.theme["blue-300"]}; 
+    box-shadow: none;
     }
 
     @media (max-width: 768px) {
@@ -104,23 +111,7 @@ export const HeaderLinks = styled.ul`
     export const UserSection = styled.div`
      
     @media (max-width: 768px) {
-        display:flex;
-        flex-direction: column;
-        border-left:none;
-        flex-wrape: nowrap;
-        justify-content: center;
-        padding-left: 0;
-        padding-right: 5px;
-
-        span {
-        text-align: center;
-        text-overflow: ellipsis;
-        }
-
-        p {
         display:none;
-        }
-       
         }
 
     display: flex;
@@ -133,7 +124,6 @@ export const HeaderLinks = styled.ul`
     width:20%;
 
     span {
-    font-size: 1rem;
     color: ${props => props.theme["blue-300"]};
 
     }
@@ -147,7 +137,6 @@ export const HeaderLinks = styled.ul`
 
     `
     export const Userimg = styled.img`
-        
         width:70px;
         height:auto;
         border-radius:60px;
@@ -156,8 +145,7 @@ export const HeaderLinks = styled.ul`
 
         
     @media (max-width: 768px) {
-        width:40px;
-        border-radius:30px;
+        display:none;
         }
 
     

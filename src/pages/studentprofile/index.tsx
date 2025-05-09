@@ -1,27 +1,14 @@
 import  Header  from "../../components/header.tsx"
-import  CourseDash  from "../../components/coursedash.tsx"
 import { House, LibraryBig, UserPen} from "lucide-react"
 
-
-export default function StudentCertificates () {
-    const linksHeaderCertificates = [
+export default function StudentProfile (){
+    const linksHeaderMyprofile = [
         {label: "Meus Cursos", href: '/myCourses', icon: LibraryBig},
         {label: "Explorar", href: '/studentDashboard', icon: House},
         {label: "", href:'/myProfile', icon:UserPen}
         
     ]
     return (
-        <>
-        
-        <Header links={linksHeaderCertificates}/>
-        <CourseDash titulo="Certificados"/>
-        
-
-        </>
-            
-       
+        <Header links={linksHeaderMyprofile} />
     )
-
-
-    
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+
 import {CourseContainer, ContainerTitle, TitleHr} from "./coursedash"
 type CourseDashTitles ={ 
     titulo:string;
