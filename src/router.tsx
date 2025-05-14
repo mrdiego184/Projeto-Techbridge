@@ -6,12 +6,15 @@ import StudentDashboard from "./pages/studentdashboard"
 import StudentCourses from "./pages/studentcourses"
 import StudentCertificates from "./pages/studentcertificates"
 import StudentProfile from "./pages/studentprofile"
+import CompanyRegform from "./pages/companyregister"
+import CompanyLogform from "./pages/companylogin"
 
 export  function Router() {
   return (
     <Routes>
         <Route path="/" element={<Choice/>} />
-        {/* <Route path="/company" element={<Comp} /> */}
+        <Route path="/companyRegister" element={<CompanyRegform/> } />
+        <Route path="/companyLogin" element={<CompanyLogform/> } />
         <Route path="/studentRegister" element={<StudentRegform/>} />
         <Route path="/studentLogin" element={<StudentLogform/>} />
         <Route path="/studentDashboard" element={<StudentDashboard/>} />

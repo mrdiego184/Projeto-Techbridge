@@ -24,8 +24,8 @@ export const HeaderLinks = styled.ul`
     justify-content: center;
     color:${props => props.theme["blue-300"]};
     list-style: none;
-    font-size: 2.5rem;
-    gap: 90px;
+    font-size: 2rem;
+    gap: 200px;
     width: 100%;
     
     li {

@@ -7,7 +7,7 @@ export default function Choice() {
   return (
     <Container>
       <Title>Escolha uma opção</Title>
-      <Button onClick={() => navigate("/company")}>
+      <Button onClick={() => navigate("/companyRegister")}>
           Sou empresa
         </Button>
 

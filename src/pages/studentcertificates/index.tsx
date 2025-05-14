@@ -1,6 +1,8 @@
 import  Header  from "../../components/header.tsx"
 import  CourseDash  from "../../components/coursedash.tsx"
 import { House, LibraryBig, UserPen} from "lucide-react"
+import { CardList, CardSection} from "./styles.ts";
+import CertificateCard from "../../components/certificate.tsx";
 
 
 export default function StudentCertificates () {
@@ -15,8 +17,20 @@ export default function StudentCertificates () {
         
         <Header links={linksHeaderCertificates}/>
         <CourseDash titulo="Certificados"/>
-        
+        <CardSection>
+        <CardList>
+            <CertificateCard/>
+            <CertificateCard/>
+            <CertificateCard/>
+            <CertificateCard/>
+            <CertificateCard/>
 
+                
+            
+
+        </CardList>
+        
+        </CardSection>
         </>
             
        
