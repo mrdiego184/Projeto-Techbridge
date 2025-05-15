@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router";
 
 // Titulo do Card
 export const CardTitle = styled.h2`
@@ -51,3 +52,8 @@ export const CardImg = styled.img`
 
 
 `
+export const Cardlink = styled(Link) `
+    text-decoration:none;
+    display:inline-block;
+`
+

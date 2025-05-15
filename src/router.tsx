@@ -8,6 +8,7 @@ import StudentCertificates from "./pages/studentcertificates"
 import StudentProfile from "./pages/studentprofile"
 import CompanyRegform from "./pages/companyregister"
 import CompanyLogform from "./pages/companylogin"
+import CoursePage from "./pages/coursepage"
 
 export  function Router() {
   return (
@@ -18,6 +19,7 @@ export  function Router() {
         <Route path="/studentRegister" element={<StudentRegform/>} />
         <Route path="/studentLogin" element={<StudentLogform/>} />
         <Route path="/studentDashboard" element={<StudentDashboard/>} />
+        <Route path="/coursePage" element={<CoursePage/>} />
         <Route path="/myCourses" element={<StudentCourses/>} />
         <Route path="/myCertificates" element={<StudentCertificates/>} />
         <Route path="/myProfile" element={<StudentProfile/>} />
