@@ -6,7 +6,7 @@ export const CourseFront = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content:center;
-    background-color: ${props => props.theme["blue-700"]};
+    padding-top: 5%;
 `
 
 export const CourseBackground = styled.img`
@@ -69,10 +69,13 @@ export const SignUp = styled.span`
     font-size:3rem;
 `
 export const Return = styled(Link)`
-    color: ${props => props.theme["blue-300"]};
-    text-decoration: none;
-    font-size:1.5rem;
-    margin-top: -4%;
-    magin-bottom: 3%;
+  color: ${props => props.theme["blue-300"]};
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding-bottom: 2rem;
 
-`
+  &:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+  }
+`;
