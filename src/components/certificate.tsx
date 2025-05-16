@@ -2,6 +2,19 @@ import { CardImg, CardTitle, Card, CertificateDownload, CertificateContainer, Ce
 
 
 export default function CertificateCard(){
+  const PdfDownload = () => {
+  try {
+    const link = document.createElement('a');
+    link.href = '/src/assets/testecertificado.pdf';
+    link.download = 'testecertificado.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  } catch (error) {
+    console.error('Erro ao baixar:', error);
+    alert('O download falhou. Tente novamente mais tarde.');
+  }
+};
     return (
             <CertificateContainer>
               <Card>
@@ -13,7 +26,7 @@ export default function CertificateCard(){
             
                 </Card>
                 <CertificateDownloaDiv>
-                 <CertificateDownload>Baixar Certificado</CertificateDownload>
+                 <CertificateDownload onClick={PdfDownload}>Baixar Certificado</CertificateDownload>
                  </CertificateDownloaDiv>
 
                </CertificateContainer>

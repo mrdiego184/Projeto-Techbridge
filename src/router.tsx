@@ -9,6 +9,7 @@ import StudentProfile from "./pages/studentprofile"
 import CompanyRegform from "./pages/companyregister"
 import CompanyLogform from "./pages/companylogin"
 import CoursePage from "./pages/coursepage"
+import StudyPage from "./pages/studypage"
 
 export  function Router() {
   return (
@@ -23,6 +24,7 @@ export  function Router() {
         <Route path="/myCourses" element={<StudentCourses/>} />
         <Route path="/myCertificates" element={<StudentCertificates/>} />
         <Route path="/myProfile" element={<StudentProfile/>} />
+        <Route path="/studyPage" element={<StudyPage/>} />
     </Routes>
 )
 }

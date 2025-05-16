@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import styled from "styled-components"
 
 export const MyCourse = styled.div`
@@ -49,6 +50,15 @@ export const MyCousepercentage = styled.h1`
 
     @media (max-width: 768px){
     font-size: 2rem;
+    }
+`
+export const LinksButton = styled(Link)`
+    text-decoration:none;
+    display:flex;
+
+    &:active {
+    color: ${props => props.theme["blue-300"]}; 
+    box-shadow: none;
     }
 `
 export const MyCourseButtons = styled.div`

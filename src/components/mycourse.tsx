@@ -1,4 +1,4 @@
-import {MyCourse, MyCourseimg, MyCoursetext, MyCoursetitle, MyCousepercentage, MyCourseContinue, MyCourseAcess, MyCourseButtons} from "./mycourse"
+import {MyCourse, MyCourseimg, MyCoursetext, MyCoursetitle, MyCousepercentage, MyCourseContinue, MyCourseAcess, MyCourseButtons,LinksButton} from "./mycourse"
 export default function StudentMyCourse (){
 
     return (
@@ -12,12 +12,14 @@ export default function StudentMyCourse (){
                             <MyCousepercentage>20% Concluído</MyCousepercentage>
 
                             <MyCourseButtons>
-                            <MyCourseContinue>Continuar</MyCourseContinue>
+   
+                            <LinksButton to="/studyPage"> <MyCourseContinue>Continuar</MyCourseContinue> </LinksButton>
+                            
                             <MyCourseAcess>Acessar conteúdo</MyCourseAcess>
                             </MyCourseButtons>
 
                         </MyCoursetext>
         
-                    </MyCourse>
+                    </MyCourse>         
     )
 }
