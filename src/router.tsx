@@ -10,6 +10,7 @@ import CompanyRegform from "./pages/companyregister"
 import CompanyLogform from "./pages/companylogin"
 import CoursePage from "./pages/coursepage"
 import StudyPage from "./pages/studypage"
+import CompanyDashboard from "./pages/companydashboard"
 
 export  function Router() {
   return (
@@ -17,6 +18,7 @@ export  function Router() {
         <Route path="/" element={<Choice/>} />
         <Route path="/companyRegister" element={<CompanyRegform/> } />
         <Route path="/companyLogin" element={<CompanyLogform/> } />
+        <Route path="/companyDashboard" element={<CompanyDashboard/> } />
         <Route path="/studentRegister" element={<StudentRegform/>} />
         <Route path="/studentLogin" element={<StudentLogform/>} />
         <Route path="/studentDashboard" element={<StudentDashboard/>} />
