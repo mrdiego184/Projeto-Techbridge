@@ -12,23 +12,25 @@ import CoursePage from "./pages/coursepage"
 import StudyPage from "./pages/studypage"
 import CompanyDashboard from "./pages/companydashboard"
 import CompanyCourse from "./pages/companyaddcourse"
+import CompanyParticipantsList from "./pages/companyparticipantslist"
 
 export  function Router() {
   return (
     <Routes>
         <Route path="/" element={<Choice/>} />
-        <Route path="/companyRegister" element={<CompanyRegform/> } />
-        <Route path="/companyLogin" element={<CompanyLogform/> } />
-        <Route path="/companyDashboard" element={<CompanyDashboard/> } />
         <Route path="/studentRegister" element={<StudentRegform/>} />
         <Route path="/studentLogin" element={<StudentLogform/>} />
         <Route path="/studentDashboard" element={<StudentDashboard/>} />
-        <Route path="/coursePage" element={<CoursePage/>} />
         <Route path="/myCourses" element={<StudentCourses/>} />
         <Route path="/myCertificates" element={<StudentCertificates/>} />
         <Route path="/myProfile" element={<StudentProfile/>} />
         <Route path="/studyPage" element={<StudyPage/>} />
 
+        <Route path="/companyRegister" element={<CompanyRegform/> } />
+        <Route path="/companyLogin" element={<CompanyLogform/> } />
+        <Route path="/companyDashboard" element={<CompanyDashboard/> } />
+        <Route path="/companyParticipantsList" element={<CompanyParticipantsList/> } />
+        <Route path="/coursePage" element={<CoursePage/>} />
         <Route path="/companyCourse" element={<CompanyCourse/>}/>
     </Routes>
 )
