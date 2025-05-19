@@ -11,6 +11,7 @@ import CompanyLogform from "./pages/companylogin"
 import CoursePage from "./pages/coursepage"
 import StudyPage from "./pages/studypage"
 import CompanyDashboard from "./pages/companydashboard"
+import CompanyCourse from "./pages/companyaddcourse"
 
 export  function Router() {
   return (
@@ -27,6 +28,8 @@ export  function Router() {
         <Route path="/myCertificates" element={<StudentCertificates/>} />
         <Route path="/myProfile" element={<StudentProfile/>} />
         <Route path="/studyPage" element={<StudyPage/>} />
+
+        <Route path="/companyCourse" element={<CompanyCourse/>}/>
     </Routes>
 )
 }

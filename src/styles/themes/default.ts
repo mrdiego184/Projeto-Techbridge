@@ -5,7 +5,7 @@ export const defaultTheme = {
     'gray-300': '#C4C4CC',
     'gray-400': '#8D8D99',
     'gray-500': '#7C7C8A',
-    'gray-600': '#323238',
+    'gray-600': '#2D2D2D',
     'gray-700': '#29292E',
     // cor de fundo dos inputs
     'gray-800': '#1E1E1E',
@@ -26,5 +26,5 @@ export const defaultTheme = {
   
     'red-300': '#F75A68',
     'red-500': '#AB222E',
-    'red-700': '#7A1921',
+    'red-700': '#9F2C2C',
   } as const
