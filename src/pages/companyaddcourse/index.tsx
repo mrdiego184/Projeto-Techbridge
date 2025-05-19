@@ -36,8 +36,8 @@ export default function CompanyCourse() {
             <p>Adicionar Modulo</p>
             </DivAdd>
         <div>
-          <Button>Salvar</Button>
-          <Button>Descartar</Button>
+          <Button variant="add">Salvar</Button>
+          <Button variant="discard">Descartar</Button>
         </div>
       </div>
     </Container>

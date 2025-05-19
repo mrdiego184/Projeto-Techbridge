@@ -1,4 +1,4 @@
-import styles from 'styled-components';
+import styles, { styled } from 'styled-components';
 
 export const Container = styles.div`
     display: flex;
@@ -45,20 +45,45 @@ export const InputDescricao = styles.input`
     border-radius: 4px;
     `
 
-export const Button = styles.button`
-    padding: 10px 20px;
-    background-color: ${props => props.theme["gray-700"]};
-    color: ${props => props.theme["blue-300"]};
-    border: 1px solid ${props => props.theme["blue-300"]};
-    border-radius: 4px;
-    cursor: pointer;
-    padding: 10px 40px;
-    margin: 10px;
-    &:hover {
-        background-color: ${props => props.theme["blue-300"]};
-        color: ${props => props.theme["gray-900"]};
-    }
-`
+interface ButtonProps {
+  variant?: 'add' | 'discard';
+}
+
+export const Button = styled.button<ButtonProps>`
+  padding: 10px 40px;
+  margin: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid;
+
+background-color: ${props => props.theme["gray-700"]};
+
+  color: ${({ theme, variant }) =>
+    variant === 'add' ? theme["blue-300"] :
+    variant === 'discard' ? theme["red-700"] :
+    theme["blue-300"]
+  };
+
+  border-color: ${({ theme, variant }) =>
+    variant === 'add' ? theme["blue-300"] :
+    variant === 'discard' ? theme["red-700"] :
+    theme["blue-300"]
+  };
+
+  &:hover {
+    background-color: ${({ theme, variant }) =>
+      variant === 'add' ? theme["blue-300"] :
+      variant === 'discard' ? theme["red-500"] :
+      theme["blue-300"]
+    };
+
+    color: ${({ theme, variant }) =>
+      variant === 'add' || variant === 'discard'
+        ? theme["white"]
+        : theme["white"]
+    };
+  }
+`;
 
 export const DivAdd = styles.div`
     display: flex;
