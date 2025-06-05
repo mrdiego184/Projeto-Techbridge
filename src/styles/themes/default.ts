@@ -13,10 +13,10 @@ export const defaultTheme = {
     'gray-900': '#18181B',
     
     // Cor de texto 
-    'blue-300': '#006387',
+    'blue-300': '#4a9eff',
 
     // Azul de fundo e tela de cadastro
-    'blue-700': '#032E3D',
+    'blue-700': '#2c5aa0;',
 
 
     

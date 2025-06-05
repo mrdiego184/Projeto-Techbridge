@@ -1,11 +1,13 @@
-import {DashboardHeader, CompanyInfo, CompanyName, CompanyEdit, ManagamentSection} from "./styles"
+import {DashboardHeader, CompanyInfo, CompanyName, CompanyEdit} from "./styles"
+import CourseManagement from "../../components/coursemanager.tsx"
 
 export default function CompanyDashboard () {
     return (
         <>
         <DashboardHeader>
             <CompanyInfo>
-                <CompanyName>KAFNET BRASIL</CompanyName>
+                
+                <CompanyName>NOME DA EMPRESA</CompanyName>
 
                 <CompanyEdit to="/companyEdit">Editar dados</CompanyEdit>
 
@@ -15,10 +17,10 @@ export default function CompanyDashboard () {
 
         </DashboardHeader>
 
-        <ManagamentSection> 
+        <CourseManagement>
 
+        </CourseManagement>
 
-        </ManagamentSection>
         </>
 
     )

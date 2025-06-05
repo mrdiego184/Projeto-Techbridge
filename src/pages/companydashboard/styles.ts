@@ -17,6 +17,28 @@ export const DashboardHeader = styled.div`
     font-weight: bolder;
 
     }
+
+    @media(max-width: 1024px){
+    height: 10dvh;
+
+    h1 {
+    font-size: 1rem;
+    }
+
+
+    }
+
+    
+
+    @media(max-width: 768px){
+    height: 10dvh;
+
+    h1 {
+    font-size: 1rem;
+    }
+
+
+    }
 `
 
 export const CompanyInfo = styled.div`
@@ -25,13 +47,28 @@ export const CompanyInfo = styled.div`
     display:flex;
     flex-direction: column;
     align-items: center;
+    justify-content;center;
     height:100%;
+
+    @media(max-width: 768px) {
+    display:flex;
+    }
 `
 
 export const CompanyName = styled.h3`
     color: ${props => props.theme["blue-300"]}; 
-    font-size: 2rem;
+    font-size: 1rem;
     margin-top: 10%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+
+
+    @media(max-width: 768px) {
+    font-size: 0.8rem;
+    text-align: center;
+    }
 
 `
 
@@ -39,9 +76,16 @@ export const CompanyEdit = styled(Link)`
     color: white;
     text-decoration: none;
     margin-top: 2%;
+
+    &:hover{
+    text-decoration: underline;
+    }
+
+     @media(max-width: 768px) {
+    font-size: 0.8rem;
+    text-align: center;
+    }
 `
 
-export const ManagamentSection = styled.div`
-    height: 82dvh;
-    background-color: ${props => props.theme["blue-700"]}; 
-`
+
+ 
