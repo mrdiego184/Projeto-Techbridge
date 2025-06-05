@@ -27,7 +27,7 @@ const onSubmit = async (data: LoginData) => {
         headers: {
           "Content-Type": "application/json",
         },
-        withCredentials: true,  // Importante para cookies/sessões
+        withCredentials: true, 
       }
     );
 

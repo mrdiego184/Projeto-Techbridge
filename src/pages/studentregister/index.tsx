@@ -30,7 +30,6 @@ const StudentRegform = () => {
   } = useForm<FormData>();
 
 const onSubmit = async (data: FormData) => {
-  console.log("Dados do formulário:", data);
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { confsenha, ...dadosParaEnviar } = data;
