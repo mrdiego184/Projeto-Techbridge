@@ -5,6 +5,7 @@ import {
   LinkLogin,
   MensagemErro,
 } from "./styles.ts";
+import { useNavigate } from "react-router-dom";
 import validator from "validator";
 import axios from "axios";
 
@@ -17,8 +18,11 @@ type FormData = {
   confsenha: string;
 };
 
+
 const StudentRegform = () => {
+  const navigate = useNavigate();
   const {
+    
     register,
     handleSubmit,
     formState: { errors },
@@ -37,7 +41,7 @@ const onSubmit = async (data: FormData) => {
     console.log("Resposta da API:", response.data);
     alert("Cadastro realizado com sucesso!");
     // Aqui você pode limpar o formulário ou redirecionar
-
+    navigate("/studentDashboard");
   } catch (error: any) {
     console.error("Erro na requisição:", error);
     if (error.response) {
