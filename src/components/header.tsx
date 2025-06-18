@@ -1,6 +1,6 @@
 // Componente do Cabeçalho
 import { type LucideIcon} from 'lucide-react';
-import {  HeaderContainer, HeaderLinks, LinksHeader, UserSection, Userimg,} from './header.ts'
+import {  HeaderContainer, HeaderLinks, LinksHeader, UserSection, Userimg, EditLink} from './header.ts'
 
 
 interface LinkPage{
@@ -33,7 +33,7 @@ export default function Header({ links }: PropsHeader) {
 
             <UserSection>
             <span>Olá usuário!</span>
-            <p>Editar perfil</p>
+            <EditLink to="/myProfile">Editar perfil</EditLink>
             </UserSection> 
 
             <Userimg src="https://img.icons8.com/win10/512w/FFFFFF/user.png"> 

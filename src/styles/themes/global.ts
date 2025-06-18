@@ -14,9 +14,13 @@ export const GlobalStyle =  createGlobalStyle`
         background-color: ${props => props.theme["gray-900"]};
         color: ${props => props.theme["gray-100"]};
         -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
         }
     body, input, textarea, button {
     font: 400 1rem 'Roboto', sans-serif;
     }
     
+    html{ 
+    scroll-behavior:smooth;
+    }
 `
