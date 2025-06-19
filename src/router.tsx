@@ -17,7 +17,7 @@ import CompanyParticipantsList from "./pages/companyparticipantslist"
 export  function Router() {
   return (
     <Routes>
-        <Route path="/choicePage" element={<Choice/>} />
+        <Route path="/" element={<Choice/>} />
         <Route path="/studentRegister" element={<StudentRegform/>} />
         <Route path="/studentLogin" element={<StudentLogform/>} />
         <Route path="/studentDashboard" element={<StudentDashboard/>} />
