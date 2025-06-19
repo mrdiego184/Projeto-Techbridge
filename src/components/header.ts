@@ -136,6 +136,18 @@ export const HeaderLinks = styled.ul`
     }
 
     `
+
+    export const EditLink = styled(Link)`
+    color: white;
+    font-size: 0.9rem;
+    text-decoration:none;
+    cursor:pointer;
+
+    &:hover {
+    text-decoration:underline;
+    }
+
+    `
     export const Userimg = styled.img`
         width:70px;
         height:auto;

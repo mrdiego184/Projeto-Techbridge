@@ -30,23 +30,9 @@ export const DataTitle = styled.h1`
     align-items:center;
     justify-content:center;
     margin-top:5%;
-    font-size:2rem;
-`
+    font-size:3rem;
 
-export const StudentProfilee = styled.div`
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    margin-bottom:3%;
-    margin-top:-7%;
-`
-export const StudentImage = styled.img`
-        width:150px;
-        height:auto;
-        border-radius:100px;
-        border:solid ${props => props.theme["blue-300"]};
-    
-    
+
 `
 export const DataType = styled.h3`
     color: ${props => props.theme["blue-300"]};

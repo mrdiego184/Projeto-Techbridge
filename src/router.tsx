@@ -13,6 +13,7 @@ import StudyPage from "./pages/studypage"
 import CompanyDashboard from "./pages/companydashboard"
 import CompanyCourse from "./pages/companyaddcourse"
 import CompanyParticipantsList from "./pages/companyparticipantslist"
+import CompanyEdit from "./pages/companyedit"
 
 export  function Router() {
   return (
@@ -32,6 +33,7 @@ export  function Router() {
         <Route path="/companyParticipantsList" element={<CompanyParticipantsList/> } />
         <Route path="/coursePage" element={<CoursePage/>} />
         <Route path="/companyCourse" element={<CompanyCourse/>}/>
+        <Route path="/companyEdit" element={<CompanyEdit/>}/>
     </Routes>
 )
 }

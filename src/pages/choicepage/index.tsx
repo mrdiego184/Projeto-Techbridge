@@ -1,4 +1,4 @@
-import { Button, MainSection, LogoImg, LogoSection, LogoText, Title, MainInfoContainer, InfoTitles, InfoTexts, AcessSection, EniacPartnerLogo, AcessRedirect, BenefitsSection, BenefitsTitle, StudentsBenefits, CompanyBenefits, BenefitsText, ImgContainer, ImgBenefit, BenefitsIcon, IconsSection, BenefitsInfo, ContentColumn} from "./styles";
+import { MainSection, LogoImg, LogoSection, LogoText, MainInfoContainer, InfoTitles, InfoTexts, AcessSection, EniacPartnerLogo, AcessRedirect, BenefitsSection, BenefitsTitle, StudentsBenefits, CompanyBenefits, BenefitsText, ImgContainer, ImgBenefit, BenefitsIcon, IconsSection, BenefitsInfo, ContentColumn, TitleChoice, ButtonsChoice, ChoiceSection, Options, CompanyChoice, StudentChoice} from "./styles";
 import { useNavigate } from "react-router-dom";
 import {BookOpen, UserSearch, BriefcaseBusiness, Hourglass} from "lucide-react"
 
@@ -10,7 +10,7 @@ export default function Choice() {
       <> 
       <AcessSection>
         <a target="blank" href="https://www.eniac.edu.br/"><EniacPartnerLogo src="https://www.eniac.edu.br/hubfs/logos_eniac_centro_universitario_branco-1.png"></EniacPartnerLogo> </a>
-        <AcessRedirect>ACESSAR</AcessRedirect>
+        <AcessRedirect href="#Acessar">ACESSAR</AcessRedirect>
       </AcessSection>
       <LogoSection>
 
@@ -54,7 +54,7 @@ export default function Choice() {
       <ImgBenefit src="/src/assets/student.jpg" />
     </ImgContainer>
   </BenefitsInfo>
-</StudentsBenefits>
+        </StudentsBenefits>
 
           
 
@@ -74,18 +74,36 @@ export default function Choice() {
       </IconsSection>
     </ContentColumn>
   </BenefitsInfo>
-</CompanyBenefits>
+            </CompanyBenefits>
 
         </BenefitsSection>
 
-        <Title>Selecione uma opção para acessar a plataforma</Title>
-        <Button onClick={() => navigate("/companyRegister")}>
-          Sou empresa
-        </Button>
+        <ChoiceSection id="Acessar">
 
-        <Button onClick={() => navigate("/studentRegister")}>
+        <TitleChoice>Selecione uma opção para acessar a plataforma</TitleChoice>
+
+        <Options>
+
+      
+        
+        <StudentChoice>
+        <ButtonsChoice onClick={() => navigate("/studentRegister")}>
           Sou estudante
-        </Button>
+        </ButtonsChoice>
+        </StudentChoice>
+
+         <CompanyChoice> 
+
+        <ButtonsChoice onClick={() => navigate("/companyRegister")}>
+          Sou empresa
+        </ButtonsChoice>
+
+        </CompanyChoice>
+
+        </Options>
+
+        </ChoiceSection>
+
       </MainSection>
       </>
   );
