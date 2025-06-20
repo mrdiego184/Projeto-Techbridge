@@ -29,9 +29,7 @@ const handleSalvarCurso = async () => {
       return;
     }
 
-    const empresa = JSON.parse(empresaData);
-    
-    console.log("ID da empresa:", empresa.id); // Adicione este log
+    const empresa = JSON.parse(empresaData)
     
     if (!empresa?.id) {
       alert("ID da empresa não encontrado. Faça login novamente.");
@@ -45,9 +43,9 @@ const handleSalvarCurso = async () => {
       company_id: empresa.id
     };
 
-    console.log("Enviando dados:", dadosCurso); // Log dos dados sendo enviados
+    
 
-    const response = await axios.post("http://localhost:8000/courses", dadosCurso);
+    const response = await axios.post("http://localhost:8000/createCourses", dadosCurso);
     
     console.log("Resposta:", response.data);
     alert(`Curso criado com sucesso! ID: ${response.data.curso_id}`);
@@ -60,7 +58,7 @@ const handleSalvarCurso = async () => {
     console.error("Erro detalhado:", error.response?.data || error.message);
     alert(error.response?.data?.detail || "Erro ao criar curso");
   }
-};g
+}
   return (
     <Container>
       <Header>
@@ -116,7 +114,7 @@ const handleSalvarCurso = async () => {
         </DivAdd>
 
         <div>
-          <Button variant="add" onClick={handleSalvarCurso}>
+          <Button variant="add"  onClick={handleSalvarCurso}>
             Salvar
           </Button>
           <Button variant="discard">Descartar</Button>
