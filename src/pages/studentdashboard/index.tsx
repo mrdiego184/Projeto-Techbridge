@@ -55,6 +55,7 @@ export default function StudentDashboard () {
             cursos.map((curso) => (
               <CourseCard
                 key={curso.id}
+                id={curso.id}
                 name={curso.name}
                 description={curso.description}
                 youtubeLink={curso.youtube_link}

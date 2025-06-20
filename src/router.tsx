@@ -27,11 +27,12 @@ export  function Router() {
         <Route path="/myProfile" element={<StudentProfile/>} />
         <Route path="/studyPage" element={<StudyPage/>} />
 
+        <Route path="/coursePage/:id" element={<CoursePage />} />
+
         <Route path="/companyRegister" element={<CompanyRegform/> } />
         <Route path="/companyLogin" element={<CompanyLogform/> } />
         <Route path="/companyDashboard" element={<CompanyDashboard/> } />
         <Route path="/companyParticipantsList" element={<CompanyParticipantsList/> } />
-        <Route path="/coursePage" element={<CoursePage/>} />
         <Route path="/companyCourse" element={<CompanyCourse/>}/>
         <Route path="/companyEdit" element={<CompanyEdit/>}/>
     </Routes>

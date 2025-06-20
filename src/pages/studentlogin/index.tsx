@@ -30,7 +30,7 @@ const onSubmit = async (data: LoginData) => {
         withCredentials: true, 
       }
     );
-
+console.log(response.data); 
     localStorage.setItem("user", JSON.stringify(response.data));
     navigate("/studentDashboard");
     

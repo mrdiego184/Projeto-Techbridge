@@ -2,15 +2,16 @@ import { CardImg, CardTitle, Card, Cardlink} from "./coursecard";
 
 
 interface CourseCardProps {
+  id: number;
   name: string;
   description: string;
   youtubeLink: string;
   companyName: string;
 }
 
-export default function CourseCard({ name, description, youtubeLink, companyName }: CourseCardProps) {
+export default function CourseCard({ id,  name, description, youtubeLink, companyName }: CourseCardProps) {
   return (
-    <Cardlink to="/coursePage">
+    <Cardlink  to={`/coursePage/${id}`}>
       <Card>
         <CardImg
           src={youtubeLink}

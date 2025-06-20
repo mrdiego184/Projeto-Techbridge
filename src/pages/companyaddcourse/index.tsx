@@ -60,11 +60,7 @@ const handleSalvarCurso = async () => {
     console.error("Erro detalhado:", error.response?.data || error.message);
     alert(error.response?.data?.detail || "Erro ao criar curso");
   }
-<<<<<<< HEAD
 }
-=======
-};
->>>>>>> cbd9a793ed5211da7cf7032096e65494a023071a
   return (
 
     <> 

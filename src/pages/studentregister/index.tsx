@@ -10,6 +10,7 @@ import validator from "validator";
 import axios from "axios";
 
 type FormData = {
+  id: number,
   name: string;
   username: string;
   email: string;
