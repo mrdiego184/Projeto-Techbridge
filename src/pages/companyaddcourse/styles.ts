@@ -1,5 +1,34 @@
 import styles, { styled } from 'styled-components';
 
+export const DashboardHeader = styled.div`
+    border-bottom: solid ${props => props.theme["blue-300"]}; 
+    height: 18dvh;
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    h1 { 
+    color: ${props => props.theme["blue-300"]}; 
+    margin: 0 auto;
+    font-size: 2rem;
+    font-weight: bolder;
+
+
+
+`
+export const CompanyInfo = styled.div`
+    border-right: solid ${props => props.theme["blue-300"]}; 
+    width: 25%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content;center;
+    height:50%;
+
+    @media(max-width: 768px) {
+    display:flex;
+    }
+`
 export const Container = styles.div`
     display: flex;
     flex-direction: column;
@@ -20,6 +49,7 @@ export const Header = styles.header`
 export const Title = styles.p`
     font-size: 24px;
     font-weight: bold;
+    color:${props => props.theme["blue-300"]};
 `
 
 export const Label = styles.label`
@@ -29,20 +59,22 @@ text-align: left;
 `
 
 export const Input = styles.input`
-    width: 100%;
+    width: 35%;
     padding: 8px;
     border: 1px solid ${props => props.theme["gray-600"]};
     border-radius: 4px;
     background-color: ${props => props.theme["gray-600"]};
+    color:white;
 `
 
-export const InputDescricao = styles.input`
-    width: 100%;
-    height: 100px;
+export const InputDescricao = styles.textarea`
+    width: 35%;
+    height: 150px;
     padding: 8px;
     border: 1px solid ${props => props.theme["gray-600"]};
     background-color: ${props => props.theme["gray-600"]};
     border-radius: 4px;
+    color: white;
     `
 
 interface ButtonProps {
@@ -92,6 +124,7 @@ export const DivAdd = styles.div`
     align-items: center;
     padding: 20px;
     gap: 20px;
+    margin-left:10%;
 
     color: ${props => props.theme["blue-300"]};
 `
@@ -107,11 +140,36 @@ export const DivPlus = styles.div`
     color: ${props => props.theme["blue-300"]};
     `
 
-export const DivConfig = styles.div`
+export const CourseSection = styles.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: left;
-    padding: 10px;
+    padding: 50px;
     gap: 8px;
+    background-color:rgb(8, 43, 59);
+    width: 70dvw;
+    border-radius:5px;
+    font-size:1.2rem;
+
+    h2 {
+    color: ${props => props.theme["blue-300"]};
+    }
+  
+`
+export const ModuleSection = styles.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+    padding: 50px;
+    gap: 8px;
+    background-color:rgb(0, 33, 48);
+    width: 70dvw;
+    border-radius:5px;
+    font-size:1.2rem;
+
+    h2 {
+    color: ${props => props.theme["blue-300"]};
+    }
 `

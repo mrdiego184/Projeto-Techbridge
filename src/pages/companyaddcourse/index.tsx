@@ -5,13 +5,15 @@ import {
   Button,
   Container,
   DivAdd,
-  DivConfig,
+  CourseSection,
   DivPlus,
-  Header,
   Input,
   InputDescricao,
   Label,
   Title,
+  DashboardHeader,
+  CompanyInfo,
+  ModuleSection
 } from "./styles";
 
 export default function CompanyCourse() {
@@ -60,29 +62,38 @@ const handleSalvarCurso = async () => {
     console.error("Erro detalhado:", error.response?.data || error.message);
     alert(error.response?.data?.detail || "Erro ao criar curso");
   }
-};g
+};
   return (
-    <Container>
-      <Header>
+
+    <> 
+    
+      <DashboardHeader>
+        <CompanyInfo>
         <Title>{empresa?.nome || "NOME DA EMPRESA"}</Title>
         <p>Editar dados</p>
-        <p>Criar novo Curso</p>
-      </Header>
+        </CompanyInfo>
 
-      <DivConfig>
-        <p>Configuração Inicial</p>
+        <h1>{titulo || "TÍTULO DO CURSO"}</h1>
+      </DashboardHeader>
+
+      <Container>
+
+      <CourseSection>
+        <h2>Configuração Inicial</h2>
 
         <Label htmlFor="">Título do Curso</Label>
         <Input
           type="text"
           value={titulo}
           onChange={(e) => setTitulo(e.target.value)}
+          placeholder="Defina um título para o curso"
         />
 
         <Label htmlFor="">Descrição</Label>
         <InputDescricao
           value={description}
           onChange={(e) => setDescription(e.target.value)}
+          placeholder="Digite uma descrição para o curso"
         />
 
         <Label htmlFor="">Link do Youtube</Label>
@@ -90,22 +101,22 @@ const handleSalvarCurso = async () => {
           type="text"
           value={youtubeLink}
           onChange={(e) => setYoutubeLink(e.target.value)}
+          placeholder="Insira o link da vídeoaula"
         />
-      </DivConfig>
+      </CourseSection>
 
-      <DivConfig>
-        <p>Configuração Módulo 1</p>
+      <ModuleSection>
+        <h2>Configuração Módulo 1</h2>
 
         <Label htmlFor="">Título do Módulo</Label>
         <Input type="text" disabled placeholder="(Futuro campo de módulo)" />
 
         <Label htmlFor="">Descrição do Módulo</Label>
         <InputDescricao
-          type="text"
           disabled
           placeholder="(Futuro campo de módulo)"
         />
-      </DivConfig>
+      </ModuleSection>
 
       <div>
         <DivAdd>
@@ -123,5 +134,7 @@ const handleSalvarCurso = async () => {
         </div>
       </div>
     </Container>
+
+    </>
   );
 }
